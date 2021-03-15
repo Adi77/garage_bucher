@@ -10,7 +10,8 @@ module.exports = {
       options: {
         spaceId: `wk08j77qze2d`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `Mb0P66SLE7IHKOpRHow8R6Hsn06ACdf9X9XOLk8qva4`
+        accessToken: `Mb0P66SLE7IHKOpRHow8R6Hsn06ACdf9X9XOLk8qva4`,
+        forceFullSync: true
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -42,3 +43,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
